@@ -1,0 +1,11 @@
+syntax = "proto3";
+package myservice;
+service MyService {
+rpc getCarStatus (CarStatusRequest) returns (CarStatusResponse) {}
+}
+message CarStatusRequest {
+string id = 1;
+}
+message CarStatusResponse {
+string carStatus = 1;
+}
